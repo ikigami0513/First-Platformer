@@ -1,0 +1,113 @@
+{
+    "components": [
+        {
+            "rotation": 0.0,
+            "scaleX": 4.0,
+            "scaleY": 4.0,
+            "type": "Transform2d",
+            "x": 193.65451049804688,
+            "y": 1389.2718505859375,
+            "zIndex": 1
+        },
+        {
+            "columns": 9,
+            "rows": 3,
+            "texturePath": "assets/textures/tilemap_characters.png",
+            "type": "SpriteSheetRenderer"
+        },
+        {
+            "animations": {
+                "idle_left": {
+                    "flipX": false,
+                    "flipY": false,
+                    "frameDuration": 0.10000000149011612,
+                    "frames": [
+                        0
+                    ],
+                    "loop": true
+                },
+                "idle_right": {
+                    "flipX": true,
+                    "flipY": false,
+                    "frameDuration": 0.10000000149011612,
+                    "frames": [
+                        0
+                    ],
+                    "loop": true
+                },
+                "walk_left": {
+                    "flipX": false,
+                    "flipY": false,
+                    "frameDuration": 0.10000000149011612,
+                    "frames": [
+                        0,
+                        1
+                    ],
+                    "loop": true
+                },
+                "walk_right": {
+                    "flipX": true,
+                    "flipY": false,
+                    "frameDuration": 0.10000000149011612,
+                    "frames": [
+                        0,
+                        1
+                    ],
+                    "loop": true
+                }
+            },
+            "currentAnimation": "",
+            "currentFrameIndex": 0,
+            "timer": 0.0,
+            "type": "Animator2d"
+        },
+        {
+            "className": "PlayerController",
+            "properties": {
+                "facing_right": true,
+                "jump_force": -700.0,
+                "speed": 400.0
+            },
+            "scriptName": "PlayerController",
+            "type": "ScriptComponent"
+        },
+        {
+            "height": 24.0,
+            "isTrigger": false,
+            "offsetX": 0.0,
+            "offsetY": 0.0,
+            "type": "RectCollider",
+            "width": 22.0
+        },
+        {
+            "gravityScale": 1.0,
+            "isKinematic": false,
+            "mass": 1.0,
+            "type": "RigidBody2d",
+            "velocityX": 0.0,
+            "velocityY": 0.0
+        },
+        {
+            "bgColor": [
+                135,
+                206,
+                235,
+                255
+            ],
+            "boundsH": 1718.5205078125,
+            "boundsW": 3603.4990234375,
+            "boundsX": 10.0,
+            "boundsY": 10.0,
+            "isMain": true,
+            "lerpFactor": 0.0,
+            "offsetX": 0.0,
+            "offsetY": 0.0,
+            "type": "Camera2d",
+            "useWorldBounds": true,
+            "zoom": 1.0
+        }
+    ],
+    "id": 18165712354173925497,
+    "name": "Player",
+    "parentId": 0
+}

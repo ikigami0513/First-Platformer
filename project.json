@@ -1,0 +1,13 @@
+{
+    "build": {
+        "start_scene": "assets/scenes/level_1.scene"
+    },
+    "display": {
+        "height": 1080,
+        "width": 1920
+    },
+    "project": {
+        "name": "First Platformer",
+        "version": "1.0.0"
+    }
+}

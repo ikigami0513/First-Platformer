@@ -1,0 +1,49 @@
+{
+    "components": [
+        {
+            "rotation": 0.0,
+            "scaleX": 4.0,
+            "scaleY": 4.0,
+            "type": "Transform2d",
+            "x": 626.6029052734375,
+            "y": 1185.0,
+            "zIndex": 0
+        },
+        {
+            "columns": 20,
+            "rows": 9,
+            "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+            "type": "SpriteSheetRenderer"
+        },
+        {
+            "flipX": false,
+            "flipY": false,
+            "frames": [
+                151,
+                152
+            ],
+            "loop": true,
+            "speed": 0.15000000596046448,
+            "type": "Animation2d"
+        },
+        {
+            "height": 14.0,
+            "isTrigger": true,
+            "offsetX": 0.0,
+            "offsetY": 0.0,
+            "type": "RectCollider",
+            "width": 14.0
+        },
+        {
+            "className": "CoinComponent",
+            "properties": {
+                "score_to_add": 100
+            },
+            "scriptName": "CoinComponent",
+            "type": "ScriptComponent"
+        }
+    ],
+    "id": 9260073869928079933,
+    "name": "Coin",
+    "parentId": 17745039302976227293
+}

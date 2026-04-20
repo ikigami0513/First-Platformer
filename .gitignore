@@ -1,0 +1,3 @@
+build_standalone
+*.pyc
+imgui.ini

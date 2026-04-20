@@ -1,0 +1,59 @@
+{
+    "components": [
+        {
+            "rotation": 0.0,
+            "scaleX": 4.0,
+            "scaleY": 4.0,
+            "type": "Transform2d",
+            "x": 1525.77783203125,
+            "y": 1226.66650390625,
+            "zIndex": 0
+        },
+        {
+            "gridHeight": 3,
+            "gridWidth": 1,
+            "layers": [
+                {
+                    "data": [
+                        111,
+                        131,
+                        131
+                    ],
+                    "isSolid": false,
+                    "isVisible": true,
+                    "name": "Background"
+                }
+            ],
+            "showGrid": true,
+            "tileSize": [
+                18.0,
+                18.0
+            ],
+            "tileSpacing": 1,
+            "tilesetPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+            "type": "TileMap"
+        },
+        {
+            "height": 54.0,
+            "isTrigger": true,
+            "offsetX": 36.0,
+            "offsetY": 110.0,
+            "type": "RectCollider",
+            "width": 18.0
+        },
+        {
+            "className": "EndLevelFlag",
+            "properties": {
+                "animation_speed": 0.20000000298023224,
+                "is_level_finish": false,
+                "tile_frame_a_id": 111,
+                "tile_frame_b_id": 112
+            },
+            "scriptName": "EndLevelFlag",
+            "type": "ScriptComponent"
+        }
+    ],
+    "id": 1515468574530946055,
+    "name": "End Level Flag",
+    "parentId": 0
+}

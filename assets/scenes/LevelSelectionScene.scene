@@ -1,0 +1,95 @@
+{
+    "gameObjects": [
+        {
+            "components": [
+                {
+                    "type": "PersistentComponent"
+                },
+                {
+                    "musicPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/audio/Definitely Our Town.ogg",
+                    "musicVolume": 0.25,
+                    "playOnStart": true,
+                    "sfxPaths": {},
+                    "type": "AudioSource"
+                }
+            ],
+            "id": 15652005682119652571,
+            "name": "Level Manager",
+            "parentId": 0
+        },
+        {
+            "components": [
+                {
+                    "rotation": 0.0,
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "type": "Transform2d",
+                    "x": 150.0,
+                    "y": 50.0,
+                    "zIndex": 0
+                },
+                {
+                    "color": [
+                        83,
+                        187,
+                        8,
+                        255
+                    ],
+                    "height": 50.0,
+                    "isHUD": true,
+                    "type": "ShapeRenderer",
+                    "width": 150.0
+                },
+                {
+                    "h_a": 255,
+                    "h_b": 34,
+                    "h_g": 225,
+                    "h_r": 116,
+                    "height": 50.0,
+                    "isHUD": true,
+                    "n_a": 255,
+                    "n_b": 8,
+                    "n_g": 187,
+                    "n_r": 83,
+                    "p_a": 255,
+                    "p_b": 103,
+                    "p_g": 255,
+                    "p_r": 166,
+                    "type": "Button",
+                    "width": 150.0
+                }
+            ],
+            "id": 13669617915106897951,
+            "name": "Level 1 Button",
+            "parentId": 0
+        },
+        {
+            "components": [
+                {
+                    "rotation": 0.0,
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "type": "Transform2d",
+                    "x": -36.70000076293945,
+                    "y": -13.300000190734863,
+                    "zIndex": 0
+                },
+                {
+                    "color_a": 255,
+                    "color_b": 0,
+                    "color_g": 0,
+                    "color_r": 0,
+                    "fontPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/fonts/Roboto-Regular.ttf",
+                    "fontSize": 30.0,
+                    "isHUD": true,
+                    "spacing": 1.0,
+                    "text": "Level 1",
+                    "type": "TextRenderer"
+                }
+            ],
+            "id": 8101018457333336252,
+            "name": "Level 1 Label",
+            "parentId": 13669617915106897951
+        }
+    ]
+}
