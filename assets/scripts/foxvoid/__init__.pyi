@@ -151,9 +151,24 @@ class Component:
         """The owning GameObject of this component (Read-only)."""
         ...
 
-    def start(self) -> None: ...
-    def update(self, delta_time: float) -> None: ...
-    def on_collision(self, collision: Collision2D) -> None: ...
+    def start(self) -> None: 
+        """Called once when the component is initialized."""
+        ...
+        
+    def update(self, delta_time: float) -> None: 
+        """Called every frame for logic and physics."""
+        ...
+        
+    def on_collision(self, collision: 'Collision2D') -> None: 
+        """Called when this object's collider intersects with another."""
+        ...
+        
+    def on_animation_event(self, event_name: str) -> None:
+        """
+        Called automatically by an attached Animator2d when a specific frame is reached.
+        Override this method in your script to handle animation events (e.g., footsteps, attacks).
+        """
+        ...
 
 
 class Transform2d(Component):
@@ -444,6 +459,13 @@ class Animation2d(Component):
         ...
 
 
+class LoopMode(Enum):
+    """Defines how an animation should behave when it reaches the end."""
+    Once = 0
+    Loop = 1
+    PingPong = 2
+
+
 class Animator2d(Component):
     """
     Manages and plays 2D frame-based animations using an attached SpriteSheetRenderer.
@@ -453,7 +475,16 @@ class Animator2d(Component):
         """Initializes an empty Animator2d."""
         ...
 
-    def add_animation(self, name: str, frames: list[int], frame_duration: float, loop: bool, flip_x: bool = False, flip_y: bool = False) -> None:
+    @property
+    def playback_speed(self) -> float:
+        """The global speed multiplier for the animator (1.0 is normal speed)."""
+        ...
+
+    @playback_speed.setter
+    def playback_speed(self, value: float) -> None:
+        ...
+
+    def add_animation(self, name: str, frames: list[int], frame_duration: float, loop: bool, flip_x: bool = False, flip_y: bool = False, events: dict[int, List[str]] = {}) -> None:
         """
         Registers a new animation state.
         
@@ -468,6 +499,29 @@ class Animator2d(Component):
         """
         Switches the current playback to the specified animation.
         Does nothing if the animation is already playing.
+        """
+        ...
+
+    def pause(self) -> None:
+        """Pauses the current animation. It can be resumed later."""
+        ...
+
+    def resume(self) -> None:
+        """Resumes a paused animation from where it left off."""
+        ...
+
+    def stop(self) -> None:
+        """Stops the animation and resets it to the first frame."""
+        ...
+
+    def is_playing(self) -> bool:
+        """Returns True if an animation is currently playing and not paused/stopped."""
+        ...
+
+    def is_finished(self) -> bool:
+        """
+        Returns True if the current non-looping animation has reached its final frame,
+        or if the animator is currently stopped.
         """
         ...
 
@@ -835,3 +889,117 @@ class Button(Component):
         """
         ...
 
+
+class ParticleSystem2d(Component):
+    """
+    A versatile 2D particle emitter for creating visual effects like fire, rain, and explosions.
+    All properties can be modified in real-time from Python to dynamically animate the emitter.
+    """
+    
+    is_emitting: bool
+    """If True, the system continuously spawns particles according to the emission_rate."""
+    
+    emission_rate: float
+    """Number of particles generated per second."""
+    
+    life_min: float
+    """Minimum lifetime of a generated particle in seconds."""
+    
+    life_max: float
+    """Maximum lifetime of a generated particle in seconds."""
+    
+    speed_min: float
+    """Minimum initial speed of a particle."""
+    
+    speed_max: float
+    """Maximum initial speed of a particle."""
+    
+    emission_angle: float
+    """The main direction the particles are fired in degrees (-90.0 is straight up)."""
+    
+    angle_spread: float
+    """The cone width in degrees where particles can randomly spawn around the emission_angle."""
+    
+    gravity: float
+    """Downward force applied to particles over time. Use negative values to make them float up."""
+    
+    start_color: Color
+    """The color of the particle when it is born."""
+    
+    end_color: Color
+    """The color of the particle when it dies (useful for fading out with alpha)."""
+    
+    start_size: float
+    """The size in pixels of the particle when it is born."""
+    
+    end_size: float
+    """The size in pixels of the particle when it dies."""
+
+    def __init__(self) -> None:
+        """Initializes a new ParticleSystem2d with default values."""
+        ...
+
+    def emit_burst(self, count: int) -> None:
+        """
+        Instantly fires a specific number of particles, ignoring the is_emitting state.
+        Perfect for instantaneous effects like explosions, hit sparks, or item collection.
+        
+        Args:
+            count: The number of particles to spawn immediately.
+        """
+        ...
+
+
+class ScriptableObject:
+    """
+    Base class for all data-driven assets in Foxvoid Engine.
+    Inherit from this class to create custom data containers (e.g., Items, Stats, Quests).
+    The engine will automatically inspect your custom properties and generate an ImGui interface.
+    """
+    
+    asset_id: str
+    """The unique string identifier used to load this asset from disk."""
+    
+    name: str
+    """The display name of the asset."""
+    
+    def __init__(self) -> None: 
+        """Initializes an empty ScriptableObject."""
+        ...
+
+
+class DataManager:
+    """
+    Global system responsible for loading, caching, and saving ScriptableObject assets.
+    """
+
+    @staticmethod
+    def load_asset(filepath: str) -> Optional[ScriptableObject]:
+        """
+        Loads a .asset file from disk. If the asset has already been loaded, 
+        it returns the cached instance to save memory and performance.
+        
+        Args:
+            filepath: The relative path to the .asset file (e.g., 'assets/data/sword.asset').
+            
+        Returns:
+            The fully instantiated Python object, or None if loading failed.
+        """
+        ...
+
+    @staticmethod
+    def save_asset(asset: ScriptableObject, filepath: str) -> None:
+        """
+        Serializes a ScriptableObject instance and saves it to a .asset JSON file.
+        """
+        ...
+        
+    @staticmethod
+    def clear_cache() -> None:
+        """
+        Clears all loaded assets from memory. 
+        Usually called by the engine during scene transitions.
+        """
+        ...
+        
+        

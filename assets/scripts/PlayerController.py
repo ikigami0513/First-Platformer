@@ -69,3 +69,7 @@ class PlayerController(Component):
 
     def on_collision(self, collision: Collision2D):
         pass
+
+    def on_animation_event(self, event_name: str):
+        if event_name == "test":
+            Debug.log("Test OK")

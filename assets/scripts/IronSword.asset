@@ -1,0 +1,10 @@
+{
+    "assetId": "iron_sword",
+    "className": "Item",
+    "name": "IronSword",
+    "properties": {
+        "damage": 0,
+        "item_name": "Iron Sword"
+    },
+    "scriptName": "Item"
+}

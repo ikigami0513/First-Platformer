@@ -6,10 +6,10 @@
                     "type": "PersistentComponent"
                 },
                 {
-                    "musicPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/audio/Definitely Our Town.ogg",
+                    "musicUUID": 283373877965500482,
                     "musicVolume": 0.25,
                     "playOnStart": true,
-                    "sfxPaths": {},
+                    "sfxUUIDs": {},
                     "type": "AudioSource"
                 }
             ],
@@ -79,8 +79,8 @@
                     "color_b": 0,
                     "color_g": 0,
                     "color_r": 0,
-                    "fontPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/fonts/Roboto-Regular.ttf",
                     "fontSize": 30.0,
+                    "fontUUID": 7866112698397173960,
                     "isHUD": true,
                     "spacing": 1.0,
                     "text": "Level 1",

@@ -14,30 +14,33 @@
                 {
                     "columns": 9,
                     "rows": 3,
-                    "texturePath": "assets/textures/tilemap_characters.png",
+                    "textureUUID": 8382719811574711047,
                     "type": "SpriteSheetRenderer"
                 },
                 {
                     "animations": {
                         "idle_left": {
+                            "events": null,
                             "flipX": false,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
                             "frames": [
                                 0
                             ],
-                            "loop": true
+                            "loopMode": 1
                         },
                         "idle_right": {
+                            "events": null,
                             "flipX": true,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
                             "frames": [
                                 0
                             ],
-                            "loop": true
+                            "loopMode": 1
                         },
                         "walk_left": {
+                            "events": null,
                             "flipX": false,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
@@ -45,9 +48,14 @@
                                 0,
                                 1
                             ],
-                            "loop": true
+                            "loopMode": 1
                         },
                         "walk_right": {
+                            "events": {
+                                "1": [
+                                    "test"
+                                ]
+                            },
                             "flipX": true,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
@@ -55,11 +63,14 @@
                                 0,
                                 1
                             ],
-                            "loop": true
+                            "loopMode": 1
                         }
                     },
-                    "currentAnimation": "",
+                    "currentAnimation": "idle_right",
                     "currentFrameIndex": 0,
+                    "playState": 2,
+                    "playbackDirection": 1,
+                    "playbackSpeed": 1.0,
                     "timer": 0.0,
                     "type": "Animator2d"
                 },
@@ -70,7 +81,7 @@
                         "jump_force": -700.0,
                         "speed": 400.0
                     },
-                    "scriptName": "PlayerController",
+                    "scriptUUID": 2289023028971807248,
                     "type": "ScriptComponent"
                 },
                 {
@@ -2149,7 +2160,7 @@
                         18.0
                     ],
                     "tileSpacing": 1,
-                    "tilesetPath": "assets/textures/tilemap.png",
+                    "tilesetUUID": 12883973194748138352,
                     "type": "TileMap"
                 }
             ],
@@ -2173,8 +2184,8 @@
                     "color_b": 26,
                     "color_g": 193,
                     "color_r": 225,
-                    "fontPath": "assets/fonts/Roboto-Regular.ttf",
                     "fontSize": 32.0,
+                    "fontUUID": 7866112698397173960,
                     "isHUD": true,
                     "spacing": 1.0,
                     "text": "Score: 0",
@@ -2183,7 +2194,7 @@
                 {
                     "className": "ScoreComponent",
                     "properties": null,
-                    "scriptName": "ScoreComponent",
+                    "scriptUUID": 9227022337187326967,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2223,7 +2234,7 @@
                         18.0
                     ],
                     "tileSpacing": 1,
-                    "tilesetPath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+                    "tilesetUUID": 12883973194748138352,
                     "type": "TileMap"
                 },
                 {
@@ -2242,7 +2253,7 @@
                         "tile_frame_a_id": 111,
                         "tile_frame_b_id": 112
                     },
-                    "scriptName": "EndLevelFlag",
+                    "scriptUUID": 5622749272933625163,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2264,7 +2275,7 @@
                 {
                     "columns": 20,
                     "rows": 9,
-                    "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+                    "textureUUID": 12883973194748138352,
                     "type": "SpriteSheetRenderer"
                 },
                 {
@@ -2291,7 +2302,7 @@
                     "properties": {
                         "score_to_add": 100
                     },
-                    "scriptName": "CoinComponent",
+                    "scriptUUID": 13229733906282670427,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2313,7 +2324,7 @@
                 {
                     "columns": 20,
                     "rows": 9,
-                    "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+                    "textureUUID": 12883973194748138352,
                     "type": "SpriteSheetRenderer"
                 },
                 {
@@ -2340,7 +2351,7 @@
                     "properties": {
                         "score_to_add": 100
                     },
-                    "scriptName": "CoinComponent",
+                    "scriptUUID": 13229733906282670427,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2362,7 +2373,7 @@
                 {
                     "columns": 20,
                     "rows": 9,
-                    "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+                    "textureUUID": 12883973194748138352,
                     "type": "SpriteSheetRenderer"
                 },
                 {
@@ -2389,7 +2400,7 @@
                     "properties": {
                         "score_to_add": 100
                     },
-                    "scriptName": "CoinComponent",
+                    "scriptUUID": 13229733906282670427,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2411,7 +2422,7 @@
                 {
                     "columns": 20,
                     "rows": 9,
-                    "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap.png",
+                    "textureUUID": 12883973194748138352,
                     "type": "SpriteSheetRenderer"
                 },
                 {
@@ -2438,7 +2449,7 @@
                     "properties": {
                         "score_to_add": 100
                     },
-                    "scriptName": "CoinComponent",
+                    "scriptUUID": 13229733906282670427,
                     "type": "ScriptComponent"
                 }
             ],
@@ -2466,12 +2477,13 @@
                 {
                     "columns": 9,
                     "rows": 3,
-                    "texturePath": "/home/ikigami/Documents/Projets/FoxvoidEngineGames/First Platformer/assets/textures/tilemap_characters.png",
+                    "textureUUID": 8382719811574711047,
                     "type": "SpriteSheetRenderer"
                 },
                 {
                     "animations": {
                         "left": {
+                            "events": null,
                             "flipX": false,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
@@ -2480,9 +2492,10 @@
                                 25,
                                 26
                             ],
-                            "loop": true
+                            "loopMode": 1
                         },
                         "right": {
+                            "events": null,
                             "flipX": true,
                             "flipY": false,
                             "frameDuration": 0.10000000149011612,
@@ -2491,11 +2504,14 @@
                                 25,
                                 26
                             ],
-                            "loop": true
+                            "loopMode": 1
                         }
                     },
                     "currentAnimation": "left",
                     "currentFrameIndex": 0,
+                    "playState": 2,
+                    "playbackDirection": 1,
+                    "playbackSpeed": 1.0,
                     "timer": 0.0,
                     "type": "Animator2d"
                 },
@@ -2513,7 +2529,7 @@
                         "direction": -1.0,
                         "speed": 100.0
                     },
-                    "scriptName": "Mob",
+                    "scriptUUID": 13266399219666272542,
                     "type": "ScriptComponent"
                 },
                 {
